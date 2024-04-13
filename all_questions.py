@@ -1,6 +1,7 @@
 import pytest
 from all_questions import *
 import pickle
+import math
 
 
 
@@ -27,38 +28,38 @@ def question2():
     answers = {}
 
     # type: bool
-    answers['(a) A'] = None
+    answers['(a) A'] = True
 
     # type: bool
-    answers['(a) B'] = None
+    answers['(a) B'] = False
 
     # type: bool
-    answers['(a) C'] = None
+    answers['(a) C'] = False
 
     # type: bool
-    answers['(a) D'] = None
+    answers['(a) D'] = True
 
     # type: bool
-    answers['(b) A'] = None
+    answers['(b) A'] = True
 
     # type: False
-    answers['(b) B'] = None
+    answers['(b) B'] = False
 
     # type: bool
-    answers['(b) C'] = None
+    answers['(b) C'] = True
 
     # type: bool
-    answers['(b) D'] = None
+    answers['(b) D'] = False
 
     # type: eval_float
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = None
+    answers['(c) Weight update'] = 0.5*math.log((1-p)/p)
 
     # type: float
     # the answer should be correct to 3 significant digits
-    answers['(d) Weight influence'] = None
+    answers['(d) Weight influence'] = 1.528
     return answers
 
 
@@ -67,10 +68,11 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = 'Disagree'
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = 'because the probabilites of two results of flipping a coin are 0.5, so even if do it 1000times and vote the results it will not improve the result, because in ensemble method, it will work better than a single base classifier if all base classifiers are independent of each other and All base classifiers perform better than random guessing(error rate < 0.5 for binary classification)'
+ 
     return answers
 
 
