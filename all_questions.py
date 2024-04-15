@@ -118,31 +118,31 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = p
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    answers['(a) C2-TPR'] = 2*p
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    answers['(a) C1-FPR'] = p
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    answers['(a) C2-FPR'] = 2*p
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = 'no'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = 'indeed both of them are randomly labelying the cases, because the TPR=FPR, so they are the same'
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = 'in this situation, c2 is just add more positive label to the samples, so if consider the recall, the c2 will be greater than c1, but indeed they are randomly labeling the samples, so they are the same ability. if using the recall, it will get the wrong results '
     return answers
 
 
@@ -152,24 +152,24 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = 'C2'
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = 'f1 score can show the comprehensive ability of the model, and the f1 score of c2 is greater than c1'
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = 'precision-recall-F1-Measure'
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = 'when tpr increasing, the fpr still increasing, so it cannot show the difference of the abilities of two model.but precision-recall-F1-Measure shows a more comprehensive results of two models, it is more suitable. '
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = 'C3'
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = 'C3 has the highest precision, and tpr/fpr more than one, eventhough it has a lower f1 score, it maybe more suitable'
     return answers
 
 
