@@ -55,7 +55,7 @@ def question2():
     # The formulas should only use the variable 'p'. The formulas should be
     # a valid Python expression. Use the functions in the math module as
     # required.
-    answers['(c) Weight update'] = 0.5*math.log((1-p)/p)
+    answers['(c) Weight update'] = '0.5*math.log((1-p)/p)'
 
     # type: float
     # the answer should be correct to 3 significant digits
@@ -118,16 +118,16 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = p
+    answers['(a) C1-TPR'] = 'p'
 
     # type: eval_float
-    answers['(a) C2-TPR'] = 2*p
+    answers['(a) C2-TPR'] = '2*p'
 
     # type: eval_float
-    answers['(a) C1-FPR'] = p
+    answers['(a) C1-FPR'] = 'p'
 
     # type: eval_float
-    answers['(a) C2-FPR'] = 2*p
+    answers['(a) C2-FPR'] = '2*p'
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
@@ -178,13 +178,13 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = 0.1
+    answers['(a) precision for C0'] = '0.1'
 
     # type: eval_float
-    answers['(a) recall for C0'] = p
+    answers['(a) recall for C0'] = 'p'
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = 2*p/(1+10*p)
+    answers['(b) F-measure of C0'] = '2*p/(1+10*p)'
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
