@@ -178,23 +178,23 @@ def question8():
     answers = {}
 
     # type: eval_float
-    answers['(a) precision for C0'] = None
+    answers['(a) precision for C0'] = 0.1
 
     # type: eval_float
-    answers['(a) recall for C0'] = None
+    answers['(a) recall for C0'] = p
 
     # type: eval_float
-    answers['(b) F-measure of C0'] = None
+    answers['(b) F-measure of C0'] = 2*p/(1+10*p)
 
     # type: string
     # choices: ['yes', 'no', 'unknown']
-    answers['C1 better than random?'] = None
+    answers['C1 better than random?'] = 'unknown'
 
     # type: float
     # What is the range of p for which C1 is better than random?  What is
     # "?" in the expression "p > ?"
 
-    answers['p-range'] = None
+    answers['p-range'] = 0.3
     return answers
 
 
@@ -204,18 +204,23 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] = {
+    'recall': 0.533,
+    'precision': 0.615,
+    'F-measure': 0.571,
+    'accuracy': 0.88
+}
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'F-measure'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = 'because it is an imbalanced dataset, so only consider the accuracy cannot show the comprehensive ability of the model, but f-measure can balance the precision and recall to get a more suitable result '
     return answers
 
 
@@ -225,21 +230,21 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = 'T1'
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = 'T2'
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = 'failing to detect a condition could lead to severe consequences for the patient'
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = 'if the treatments for false positive cases are very harmful, we will not to use this method'
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
